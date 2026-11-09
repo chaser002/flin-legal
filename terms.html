@@ -3,88 +3,196 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Service - Flin Bot</title>
+<title>Terms of Service · Flin Bot</title>
+<meta name="description" content="Terms of Service for the Flin Discord bot of the FlinRP community.">
+<meta name="theme-color" content="#120d08">
+<link rel="icon" href="logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terms of Service · Flin Bot">
+<meta property="og:description" content="Terms of Service for the Flin Discord bot of the FlinRP community.">
+<meta property="og:image" content="https://chaser002.github.io/flin-legal/logo.jpg">
+<meta name="twitter:card" content="summary">
 <style>
-:root{--bg:#ffffff;--fg:#1c1e21;--muted:#5b6470;--card:#f4f5f8;--accent:#4752c4;--border:#e1e4ea}
-@media (prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#e8eaed;--muted:#9aa3af;--card:#1e2128;--accent:#8f99ff;--border:#2c313a}}
+:root{
+  --bg:#120d08; --bg2:#1a130b; --card:rgba(255,255,255,.045); --border:rgba(255,184,64,.18);
+  --fg:#f4ede3; --muted:#b8ab9a; --accent:#ffb81c; --accent-2:#ff8a00; --on-accent:#1a1005;
+  --grad:linear-gradient(135deg,#ffd45a 0%,#ff9a00 100%); --shadow:0 18px 50px rgba(0,0,0,.45);
+  --hero-fade:rgba(18,13,8,.50);
+}
+@media (prefers-color-scheme:light){:root{
+  --bg:#fbf6ee; --bg2:#f3eadb; --card:#ffffff; --border:#eadbc3;
+  --fg:#2a2017; --muted:#6f6252; --accent:#b45a00; --accent-2:#d97400; --on-accent:#1a1005;
+  --shadow:0 14px 36px rgba(120,80,20,.16); --hero-fade:rgba(18,13,8,.55);
+}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-main{max-width:780px;margin:0 auto;padding:36px 20px 72px}
-h1{font-size:1.9rem;margin:0 0 6px}
-h2{font-size:1.25rem;margin:34px 0 8px;padding-top:6px}
-h3{font-size:1.05rem;margin:22px 0 6px}
-p,li{color:var(--fg)}
-.muted{color:var(--muted);font-size:.92rem}
-a{color:var(--accent)}
-nav{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 26px}
-nav a{padding:6px 12px;border:1px solid var(--border);border-radius:999px;text-decoration:none;background:var(--card)}
-.lang{border-top:1px solid var(--border);margin-top:46px;padding-top:6px}
-ul{padding-left:22px}
-footer{margin-top:50px;font-size:.88rem;color:var(--muted)}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent-2)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* язык: без JS показываются оба блока */
+html.js [data-l]{display:none}
+html.js[data-lang="en"] [data-l="en"],
+html.js[data-lang="ru"] [data-l="ru"]{display:revert}
+
+/* верхняя панель */
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.topbar-in{max-width:1000px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font-weight:700;letter-spacing:.2px}
+.brand img{width:34px;height:34px;border-radius:10px;box-shadow:0 0 0 1px var(--border)}
+.nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px;font-size:.93rem}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--fg);background:var(--card)}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:999px;padding:3px;background:var(--card);margin-left:6px}
+.seg button{all:unset;cursor:pointer;font-size:.82rem;font-weight:700;padding:4px 12px;border-radius:999px;color:var(--muted);letter-spacing:.4px}
+.seg button[aria-pressed="true"]{background:var(--grad);color:var(--on-accent)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-40px;z-index:-2;background:url(logo.jpg) center/cover;filter:blur(22px) saturate(1.15);transform:scale(1.1)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--hero-fade) 0%,var(--hero-fade) 70%,var(--bg) 100%)}
+.hero-in{max-width:1000px;margin:0 auto;padding:54px 20px 66px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.logo{width:104px;height:104px;border-radius:26px;box-shadow:0 0 0 2px rgba(255,200,80,.5),0 14px 44px rgba(255,150,0,.35);flex:none}
+.hero h1{margin:0 0 6px;font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.15;letter-spacing:-.4px;color:#fff6e8}
+.hero p{margin:0;color:#e9dcc7;max-width:560px}
+.chip{display:inline-block;margin-top:14px;padding:4px 12px;border:1px solid rgba(255,200,90,.45);border-radius:999px;font-size:.82rem;color:#ffe2a3;background:rgba(0,0,0,.28)}
+
+/* контент */
+main{max-width:1000px;margin:0 auto;padding:6px 20px 70px}
+.doc{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:8px 34px 30px;box-shadow:var(--shadow);margin-top:-6px}
+.doc h2{display:flex;gap:14px;align-items:center;font-size:1.2rem;margin:30px 0 8px;line-height:1.35}
+.num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--grad);color:var(--on-accent);font-weight:800;font-size:.95rem}
+.doc p{margin:6px 0 10px 46px}
+.doc ul{margin:6px 0 12px 46px;padding:0;list-style:none}
+.doc li{position:relative;padding-left:20px;margin:6px 0}
+.doc li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;border-radius:3px;background:var(--grad)}
+.doc strong{color:var(--fg)}
+.sep{height:1px;background:var(--border);margin:34px 0 0}
+html.js .sep{display:none}
+
+/* главная: карточки */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+.card{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--fg)}
+.card h2{margin:0 0 6px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted)}
+.card .go{display:inline-block;margin-top:14px;font-weight:700;color:var(--accent)}
+.btn{display:inline-block;margin-top:22px;padding:10px 20px;border-radius:12px;background:var(--grad);color:var(--on-accent);font-weight:800;text-decoration:none}
+.btn:hover{color:var(--on-accent);filter:brightness(1.06)}
+
+footer{max-width:1000px;margin:0 auto;padding:0 20px 46px;color:var(--muted);font-size:.9rem;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center}
+footer img{width:26px;height:26px;border-radius:8px}
+footer .sp{margin-left:auto}
+
+@media (max-width:640px){
+  .hero-in{padding:36px 18px 54px}
+  .logo{width:80px;height:80px;border-radius:20px}
+  .doc{padding:4px 20px 22px;border-radius:18px}
+  .doc p,.doc ul{margin-left:0}
+  .doc h2{margin-top:26px}
+  footer .sp{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
 </style>
+<script>
+(function(){
+  var html=document.documentElement;
+  html.classList.add('js');
+  var saved=null;
+  try{saved=localStorage.getItem('flin-lang');}catch(e){}
+  var guess=/^(ru|uk|be)/i.test(navigator.language||'')?'ru':'en';
+  function setLang(l){
+    html.setAttribute('data-lang',l);
+    html.lang=l;
+    var b=document.querySelectorAll('[data-set-lang]');
+    for(var i=0;i<b.length;i++){b[i].setAttribute('aria-pressed',b[i].getAttribute('data-set-lang')===l?'true':'false');}
+    try{localStorage.setItem('flin-lang',l);}catch(e){}
+  }
+  setLang(saved==='ru'||saved==='en'?saved:guess);
+  document.addEventListener('DOMContentLoaded',function(){setLang(html.getAttribute('data-lang'));});
+  document.addEventListener('click',function(e){
+    var t=e.target.closest&&e.target.closest('[data-set-lang]');
+    if(t){setLang(t.getAttribute('data-set-lang'));}
+  });
+})();
+</script>
 </head>
 <body>
-<main>
-<nav>
-<a href="#en">English</a>
-<a href="#ru">Русский</a>
-<a href="index.html">Home</a>
-<a href="privacy.html">Privacy Policy</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="index.html"><img src="logo.jpg" alt="Flin logo" width="34" height="34"><span>Flin Bot</span></a>
+<nav class="nav" aria-label="Main">
+<a href="terms.html" aria-current="page"><span data-l="en">Terms</span><span data-l="ru">Условия</span></a>
+<a href="privacy.html"><span data-l="en">Privacy</span><span data-l="ru">Конфиденциальность</span></a>
+<span class="seg" role="group" aria-label="Language">
+<button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+<button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+</span>
 </nav>
-
-<section id="en" lang="en">
-<h1>Terms of Service - Flin Bot</h1>
-<p class="muted">Last updated: November 9, 2026</p>
-<h2>1. Acceptance of the terms</h2>
+</div></header>
+<div class="hero"><div class="hero-in">
+<img class="logo" src="logo.jpg" alt="Flin logo" width="104" height="104">
+<div>
+<h1><span data-l="en">Terms of Service</span><span data-l="ru">Условия использования</span></h1>
+<p><span data-l="en">Rules for using the Flin Discord bot.</span><span data-l="ru">Правила использования Discord-бота Flin.</span></p>
+<span class="chip"><span data-l="en">Last updated: November 9, 2026</span><span data-l="ru">Обновлено: 9 ноября 2026</span></span>
+</div>
+</div></div>
+<main>
+<article class="doc">
+<section lang="en" data-l="en">
+<h2><span class="num">1</span><span>Acceptance of the terms</span></h2>
 <p>These Terms of Service (the "Terms") apply to the Discord bot "Flin" (the "Bot"), operated for the FlinRP community. By adding the Bot to a server or using its commands you agree to these Terms. If you do not agree, remove the Bot from your server and stop using it.</p>
-<h2>2. What the Bot does</h2>
+<h2><span class="num">2</span><span>What the Bot does</span></h2>
 <p>The Bot provides community management features, which may change over time:</p>
 <ul><li>moderation tools (warnings, mutes, kicks, bans, message cleanup, word filters, moderation logs);</li><li>automatic assignment of a role to new members;</li><li>temporary voice channels that members can create and manage;</li><li>issuing and removing faction roles by authorized members (leaders and deputies);</li><li>publishing announcements and rules on behalf of the Bot.</li></ul>
-<h2>3. Eligibility and Discord rules</h2>
+<h2><span class="num">3</span><span>Eligibility and Discord rules</span></h2>
 <p>You must follow the Discord Terms of Service and Community Guidelines and meet the minimum age required by Discord. Server administrators are responsible for how the Bot is configured on their server and for informing their members about the Bot's features.</p>
-<h2>4. Acceptable use</h2>
+<h2><span class="num">4</span><span>Acceptable use</span></h2>
 <p>You agree not to: abuse, overload or try to disrupt the Bot; exploit bugs; try to bypass permission checks or obtain roles you are not entitled to; use the Bot for harassment, spam, illegal activity or anything that violates Discord's rules.</p>
-<h2>5. Permissions</h2>
+<h2><span class="num">5</span><span>Permissions</span></h2>
 <p>The Bot requests only the permissions needed for its features (for example, managing roles, channels and moving members in voice channels). Server administrators may change or revoke these permissions at any time by editing the Bot's role or removing the Bot.</p>
-<h2>6. Availability and no warranty</h2>
+<h2><span class="num">6</span><span>Availability and no warranty</span></h2>
 <p>The Bot is provided "as is" and "as available" without warranties of any kind. We do not guarantee uninterrupted operation, and downtime, errors or loss of configuration data may occur. We may modify, suspend or discontinue any feature at any time.</p>
-<h2>7. Suspension and termination</h2>
+<h2><span class="num">7</span><span>Suspension and termination</span></h2>
 <p>We may restrict or block access to the Bot for users or servers that violate these Terms. You may stop using the Bot at any time by removing it from your server.</p>
-<h2>8. Limitation of liability</h2>
+<h2><span class="num">8</span><span>Limitation of liability</span></h2>
 <p>To the extent permitted by law, we are not liable for indirect or consequential damages, loss of data, or for decisions and actions of server staff who use the Bot (for example, moderation or role decisions).</p>
-<h2>9. Changes to the terms</h2>
+<h2><span class="num">9</span><span>Changes to the terms</span></h2>
 <p>We may update these Terms. The date of the latest update is shown at the top of the page. Continued use of the Bot after an update means you accept the new Terms.</p>
-<h2>10. Contact</h2>
+<h2><span class="num">10</span><span>Contact</span></h2>
 <p>Questions about these Terms: <a href="mailto:2andrew2134@gmail.com">2andrew2134@gmail.com</a>. Community server: <a href="https://discord.gg/xC9Wmp3T9B">https://discord.gg/xC9Wmp3T9B</a>.</p>
 </section>
-
-<section id="ru" lang="ru" class="lang">
-<h1>Условия использования - Flin Bot</h1>
-<p class="muted">Последнее обновление: 9 ноября 2026</p>
-<h2>1. Принятие условий</h2>
+<div class="sep" aria-hidden="true"></div>
+<section lang="ru" data-l="ru">
+<h2><span class="num">1</span><span>Принятие условий</span></h2>
 <p>Настоящие Условия использования (далее «Условия») относятся к Discord-боту «Flin» (далее «Бот»), который работает для сообщества FlinRP. Добавляя Бота на сервер или используя его команды, вы соглашаетесь с этими Условиями. Если вы не согласны, удалите Бота с сервера и прекратите им пользоваться.</p>
-<h2>2. Что делает Бот</h2>
+<h2><span class="num">2</span><span>Что делает Бот</span></h2>
 <p>Бот предоставляет функции управления сообществом, которые могут меняться со временем:</p>
 <ul><li>инструменты модерации (предупреждения, мьюты, кики, баны, очистка сообщений, фильтр слов, журналы модерации);</li><li>автоматическая выдача роли новым участникам;</li><li>временные голосовые каналы, которые участники создают и настраивают сами;</li><li>выдача и снятие ролей фракций уполномоченными участниками (лидерами и заместителями);</li><li>публикация объявлений и правил от имени Бота.</li></ul>
-<h2>3. Требования и правила Discord</h2>
+<h2><span class="num">3</span><span>Требования и правила Discord</span></h2>
 <p>Вы обязаны соблюдать Условия использования и Принципы сообщества Discord и соответствовать минимальному возрасту, установленному Discord. Администраторы серверов отвечают за настройку Бота на своём сервере и за информирование участников о его функциях.</p>
-<h2>4. Допустимое использование</h2>
+<h2><span class="num">4</span><span>Допустимое использование</span></h2>
 <p>Вы обязуетесь не злоупотреблять Ботом, не перегружать его и не пытаться нарушить его работу; не использовать ошибки; не пытаться обойти проверку прав или получить роли, на которые у вас нет права; не использовать Бота для преследования, спама, незаконной деятельности и действий, нарушающих правила Discord.</p>
-<h2>5. Права доступа</h2>
+<h2><span class="num">5</span><span>Права доступа</span></h2>
 <p>Бот запрашивает только те права, которые нужны для его функций (например, управление ролями, каналами и перемещение участников в голосовых каналах). Администраторы серверов могут в любой момент изменить или отозвать эти права, отредактировав роль Бота или удалив его.</p>
-<h2>6. Доступность и отсутствие гарантий</h2>
+<h2><span class="num">6</span><span>Доступность и отсутствие гарантий</span></h2>
 <p>Бот предоставляется «как есть» и «по мере доступности» без каких-либо гарантий. Мы не гарантируем бесперебойную работу, возможны простои, ошибки и потеря настроек. Мы вправе изменять, приостанавливать или прекращать любые функции в любое время.</p>
-<h2>7. Ограничение и прекращение доступа</h2>
+<h2><span class="num">7</span><span>Ограничение и прекращение доступа</span></h2>
 <p>Мы можем ограничить или заблокировать доступ к Боту для пользователей и серверов, нарушающих эти Условия. Вы можете прекратить использование Бота в любой момент, удалив его с сервера.</p>
-<h2>8. Ограничение ответственности</h2>
+<h2><span class="num">8</span><span>Ограничение ответственности</span></h2>
 <p>В пределах, допускаемых законом, мы не отвечаем за косвенный и сопутствующий ущерб, потерю данных, а также за решения и действия персонала серверов, использующего Бота (например, решения о модерации или выдаче ролей).</p>
-<h2>9. Изменение условий</h2>
+<h2><span class="num">9</span><span>Изменение условий</span></h2>
 <p>Мы можем обновлять эти Условия. Дата последнего обновления указана вверху страницы. Продолжая пользоваться Ботом после обновления, вы принимаете новые Условия.</p>
-<h2>10. Контакты</h2>
+<h2><span class="num">10</span><span>Контакты</span></h2>
 <p>Вопросы по этим Условиям: <a href="mailto:2andrew2134@gmail.com">2andrew2134@gmail.com</a>. Сервер сообщества: <a href="https://discord.gg/xC9Wmp3T9B">https://discord.gg/xC9Wmp3T9B</a>.</p>
 </section>
-
-<footer>Flin Bot · FlinRP</footer>
+</article>
 </main>
+<footer>
+<img src="logo.jpg" alt="" width="26" height="26">
+<span>© 2026 FlinRP · Flin Bot</span>
+<span class="sp"><a href="mailto:2andrew2134@gmail.com">2andrew2134@gmail.com</a> · <a href="https://discord.gg/xC9Wmp3T9B">Discord</a></span>
+</footer>
 </body>
 </html>

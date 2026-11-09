@@ -3,34 +3,159 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flin Bot - Legal</title>
+<title>Flin Bot · FlinRP</title>
+<meta name="description" content="Flin is the Discord bot of the FlinRP community. Terms of Service and Privacy Policy.">
+<meta name="theme-color" content="#120d08">
+<link rel="icon" href="logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flin Bot · FlinRP">
+<meta property="og:description" content="Flin is the Discord bot of the FlinRP community. Terms of Service and Privacy Policy.">
+<meta property="og:image" content="https://chaser002.github.io/flin-legal/logo.jpg">
+<meta name="twitter:card" content="summary">
 <style>
-:root{--bg:#ffffff;--fg:#1c1e21;--muted:#5b6470;--card:#f4f5f8;--accent:#4752c4;--border:#e1e4ea}
-@media (prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#e8eaed;--muted:#9aa3af;--card:#1e2128;--accent:#8f99ff;--border:#2c313a}}
+:root{
+  --bg:#120d08; --bg2:#1a130b; --card:rgba(255,255,255,.045); --border:rgba(255,184,64,.18);
+  --fg:#f4ede3; --muted:#b8ab9a; --accent:#ffb81c; --accent-2:#ff8a00; --on-accent:#1a1005;
+  --grad:linear-gradient(135deg,#ffd45a 0%,#ff9a00 100%); --shadow:0 18px 50px rgba(0,0,0,.45);
+  --hero-fade:rgba(18,13,8,.50);
+}
+@media (prefers-color-scheme:light){:root{
+  --bg:#fbf6ee; --bg2:#f3eadb; --card:#ffffff; --border:#eadbc3;
+  --fg:#2a2017; --muted:#6f6252; --accent:#b45a00; --accent-2:#d97400; --on-accent:#1a1005;
+  --shadow:0 14px 36px rgba(120,80,20,.16); --hero-fade:rgba(18,13,8,.55);
+}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-main{max-width:780px;margin:0 auto;padding:36px 20px 72px}
-h1{font-size:1.9rem;margin:0 0 6px}
-h2{font-size:1.25rem;margin:34px 0 8px;padding-top:6px}
-h3{font-size:1.05rem;margin:22px 0 6px}
-p,li{color:var(--fg)}
-.muted{color:var(--muted);font-size:.92rem}
-a{color:var(--accent)}
-nav{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 26px}
-nav a{padding:6px 12px;border:1px solid var(--border);border-radius:999px;text-decoration:none;background:var(--card)}
-.lang{border-top:1px solid var(--border);margin-top:46px;padding-top:6px}
-ul{padding-left:22px}
-footer{margin-top:50px;font-size:.88rem;color:var(--muted)}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent-2)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* язык: без JS показываются оба блока */
+html.js [data-l]{display:none}
+html.js[data-lang="en"] [data-l="en"],
+html.js[data-lang="ru"] [data-l="ru"]{display:revert}
+
+/* верхняя панель */
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.topbar-in{max-width:1000px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font-weight:700;letter-spacing:.2px}
+.brand img{width:34px;height:34px;border-radius:10px;box-shadow:0 0 0 1px var(--border)}
+.nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px;font-size:.93rem}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--fg);background:var(--card)}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:999px;padding:3px;background:var(--card);margin-left:6px}
+.seg button{all:unset;cursor:pointer;font-size:.82rem;font-weight:700;padding:4px 12px;border-radius:999px;color:var(--muted);letter-spacing:.4px}
+.seg button[aria-pressed="true"]{background:var(--grad);color:var(--on-accent)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-40px;z-index:-2;background:url(logo.jpg) center/cover;filter:blur(22px) saturate(1.15);transform:scale(1.1)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--hero-fade) 0%,var(--hero-fade) 70%,var(--bg) 100%)}
+.hero-in{max-width:1000px;margin:0 auto;padding:54px 20px 66px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.logo{width:104px;height:104px;border-radius:26px;box-shadow:0 0 0 2px rgba(255,200,80,.5),0 14px 44px rgba(255,150,0,.35);flex:none}
+.hero h1{margin:0 0 6px;font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.15;letter-spacing:-.4px;color:#fff6e8}
+.hero p{margin:0;color:#e9dcc7;max-width:560px}
+.chip{display:inline-block;margin-top:14px;padding:4px 12px;border:1px solid rgba(255,200,90,.45);border-radius:999px;font-size:.82rem;color:#ffe2a3;background:rgba(0,0,0,.28)}
+
+/* контент */
+main{max-width:1000px;margin:0 auto;padding:6px 20px 70px}
+.doc{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:8px 34px 30px;box-shadow:var(--shadow);margin-top:-6px}
+.doc h2{display:flex;gap:14px;align-items:center;font-size:1.2rem;margin:30px 0 8px;line-height:1.35}
+.num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--grad);color:var(--on-accent);font-weight:800;font-size:.95rem}
+.doc p{margin:6px 0 10px 46px}
+.doc ul{margin:6px 0 12px 46px;padding:0;list-style:none}
+.doc li{position:relative;padding-left:20px;margin:6px 0}
+.doc li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;border-radius:3px;background:var(--grad)}
+.doc strong{color:var(--fg)}
+.sep{height:1px;background:var(--border);margin:34px 0 0}
+html.js .sep{display:none}
+
+/* главная: карточки */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+.card{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--fg)}
+.card h2{margin:0 0 6px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted)}
+.card .go{display:inline-block;margin-top:14px;font-weight:700;color:var(--accent)}
+.btn{display:inline-block;margin-top:22px;padding:10px 20px;border-radius:12px;background:var(--grad);color:var(--on-accent);font-weight:800;text-decoration:none}
+.btn:hover{color:var(--on-accent);filter:brightness(1.06)}
+
+footer{max-width:1000px;margin:0 auto;padding:0 20px 46px;color:var(--muted);font-size:.9rem;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center}
+footer img{width:26px;height:26px;border-radius:8px}
+footer .sp{margin-left:auto}
+
+@media (max-width:640px){
+  .hero-in{padding:36px 18px 54px}
+  .logo{width:80px;height:80px;border-radius:20px}
+  .doc{padding:4px 20px 22px;border-radius:18px}
+  .doc p,.doc ul{margin-left:0}
+  .doc h2{margin-top:26px}
+  footer .sp{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
 </style>
+<script>
+(function(){
+  var html=document.documentElement;
+  html.classList.add('js');
+  var saved=null;
+  try{saved=localStorage.getItem('flin-lang');}catch(e){}
+  var guess=/^(ru|uk|be)/i.test(navigator.language||'')?'ru':'en';
+  function setLang(l){
+    html.setAttribute('data-lang',l);
+    html.lang=l;
+    var b=document.querySelectorAll('[data-set-lang]');
+    for(var i=0;i<b.length;i++){b[i].setAttribute('aria-pressed',b[i].getAttribute('data-set-lang')===l?'true':'false');}
+    try{localStorage.setItem('flin-lang',l);}catch(e){}
+  }
+  setLang(saved==='ru'||saved==='en'?saved:guess);
+  document.addEventListener('DOMContentLoaded',function(){setLang(html.getAttribute('data-lang'));});
+  document.addEventListener('click',function(e){
+    var t=e.target.closest&&e.target.closest('[data-set-lang]');
+    if(t){setLang(t.getAttribute('data-set-lang'));}
+  });
+})();
+</script>
 </head>
 <body>
-<main>
-<h1>Flin Bot</h1>
-<p class="muted">Discord bot for the FlinRP community / Discord-бот для сообщества FlinRP</p>
-<nav>
-<a href="terms.html">Terms of Service / Условия использования</a>
-<a href="privacy.html">Privacy Policy / Политика конфиденциальности</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="index.html"><img src="logo.jpg" alt="Flin logo" width="34" height="34"><span>Flin Bot</span></a>
+<nav class="nav" aria-label="Main">
+<a href="terms.html"><span data-l="en">Terms</span><span data-l="ru">Условия</span></a>
+<a href="privacy.html"><span data-l="en">Privacy</span><span data-l="ru">Конфиденциальность</span></a>
+<span class="seg" role="group" aria-label="Language">
+<button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+<button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+</span>
 </nav>
+</div></header>
+<div class="hero"><div class="hero-in">
+<img class="logo" src="logo.jpg" alt="Flin logo" width="104" height="104">
+<div>
+<h1>Flin Bot</h1>
+<p><span data-l="en">The Discord bot of the FlinRP community: moderation, automatic roles, personal voice channels and faction role management.</span><span data-l="ru">Discord-бот сообщества FlinRP: модерация, автороль, личные голосовые каналы и выдача ролей фракций.</span></p>
+<a class="btn" href="https://discord.gg/xC9Wmp3T9B"><span data-l="en">Join the community</span><span data-l="ru">Присоединиться к сообществу</span></a>
+</div>
+</div></div>
+<main>
+<div class="cards">
+<a class="card" href="terms.html">
+<h2><span data-l="en">Terms of Service</span><span data-l="ru">Условия использования</span></h2>
+<p><span data-l="en">The rules for using the bot.</span><span data-l="ru">Правила использования бота.</span></p>
+<span class="go">→</span>
+</a>
+<a class="card" href="privacy.html">
+<h2><span data-l="en">Privacy Policy</span><span data-l="ru">Политика конфиденциальности</span></h2>
+<p><span data-l="en">What data the bot processes and why.</span><span data-l="ru">Какие данные обрабатывает бот и зачем.</span></p>
+<span class="go">→</span>
+</a>
+</div>
 </main>
+<footer>
+<img src="logo.jpg" alt="" width="26" height="26">
+<span>© 2026 FlinRP · Flin Bot</span>
+<span class="sp"><a href="mailto:2andrew2134@gmail.com">2andrew2134@gmail.com</a> · <a href="https://discord.gg/xC9Wmp3T9B">Discord</a></span>
+</footer>
 </body>
 </html>
